@@ -48,7 +48,7 @@ const ListDepartmentComponent = () => {
                 </tr>
             </thead>
             <tbody>
-                {
+                {departments &&
                     departments.map( department => 
                             <tr key={department.id}>
                                 <td> {department.id} </td>

@@ -177,7 +177,7 @@ const EmployeeComponent = () => {
                                 onChange={(e) => setDepartmentId(e.target.value)}
                             >
                                <option value="Select Department">Select Department</option>
-                                {
+                                {departments &&
                                     departments.map( department => 
                                         <option key={department.id} value={department.id} > {department.departmentName}</option>
                                         )

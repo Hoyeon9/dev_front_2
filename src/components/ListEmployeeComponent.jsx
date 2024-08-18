@@ -56,7 +56,7 @@ const ListEmployeeComponent = () => {
                 </tr>
             </thead>
             <tbody>
-                {
+                {employees &&
                     employees.map(employee => 
                         <tr key={employee.id}>
                             <td>{employee.id}</td>
