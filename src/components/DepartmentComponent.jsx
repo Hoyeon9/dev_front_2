@@ -27,18 +27,14 @@ const DepartmentComponent = () => {
 
     const department = { departmentName, departmentDescription }
 
-    console.log(department); 
-
     if(id){
       updateDepartment(id, department).then((response) => {
-        console.log(response.data);
         navigator('/departments');
       }).catch(error => {
         console.error(error);
       })
     }else {
       createDepartment(department).then((response) => {
-        console.log(response.data);
         navigator('/departments')
       }).catch(error => {
         console.error(error);

@@ -50,18 +50,15 @@ const EmployeeComponent = () => {
         if(validateForm()){
 
             const employee = {firstName, lastName, email, departmentId}
-            console.log(employee)
 
             if(id){
                 updateEmployee(id, employee).then((response) => {
-                    console.log(response.data);
                     navigator('/employees');
                 }).catch(error => {
                     console.error(error);
                 })
             } else {
                 createEmployee(employee).then((response) => {
-                    console.log(response.data);
                     navigator('/employees')
                 }).catch(error => {
                     console.error(error);

@@ -14,7 +14,6 @@ const ListDepartmentComponent = () => {
 
     function listOfDepartments(){
         getAllDepartments().then((response) => {
-            console.log(response.data);
             setDepartments(response.data);
         }).catch(error => {
             console.error(error);
@@ -28,7 +27,6 @@ const ListDepartmentComponent = () => {
 
     function removeDepartment(id){
         deleteDepartment(id).then((response) => {
-            console.log(response.data);
             listOfDepartments();
         }).catch(error => {
             console.error(error);
