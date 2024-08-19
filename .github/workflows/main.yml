@@ -28,7 +28,8 @@ jobs:
         run: npm ci
       
       - name: Env variables
-        run: echo "VITE_APIURL=$VITE_APIURL" >> .env.production
+        run: |
+          echo "VITE_APIURL=$VITE_APIURL" >> .env.production
           echo "VITE_MODE=Prod Mode" >> .env.production
 
       - name: Build
