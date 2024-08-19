@@ -15,8 +15,6 @@ const ListEmployeeComponent = () => {
 
     function getAllEmployees() {
         listEmployees().then((response) => {
-            console.log("employees..?")
-            console.log(response)
             setEmployees(response.data);
         }).catch(error => {
             console.error(error);
