@@ -26,7 +26,7 @@ const ListDepartmentComponent = () => {
 
 
     function removeDepartment(id){
-        deleteDepartment(id).then((response) => {
+        deleteDepartment(id).then(() => {
             listOfDepartments();
         }).catch(error => {
             console.error(error);
